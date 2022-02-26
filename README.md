@@ -23,7 +23,8 @@ Purchased items:
 
 ```zsh
 ➜  tractive java Main.java "["CVCD", "SDFD", "DDDF", "SDFD"]" "{"CVCD": {"version": 1,"edition": "X"},"SDFD": {"version": 2,"edition": "Z"},"DDDF": {"version": 1}}"
-Purchased items: [{"version": "2,edition": "Z,quantity:2},{"version": "1,edition": "X,quantity:1},{"version": "1,quantity:1}]
+Purchased items: [{"version": "2","edition": "Z",quantity:2},{"version": "1","edition": "X",quantity:1},{"version": "1",quantity:1}]
+
 ```
 
 ## JUnit Test

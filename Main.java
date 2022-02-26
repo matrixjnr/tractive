@@ -48,7 +48,7 @@ public class Main {
 //        }
 
         //hashmap values joined together to create the list of json skeleton
-        items.forEach((key, value) -> result.append(value + "},{\""));
+        items.forEach((key, value) -> result.append(value + "}+{\""));
 
         //parser to build our list of json output
         //
@@ -60,10 +60,13 @@ public class Main {
         String r3 = r5.replace(":2\"", "\":2");
         String r4 = r3.replace(":1\"", "\":1");
         String r6 = r4.replace("\"}\",\"+", "},");
-        String r7 = "[{\"" + r6.substring(0, r6.length() - 5) + "]";
+        String r8 = r6.replace("\"2,", "\"2\",\"");
+        String r9 = r8.replace("\"1,", "\"1\",\"");
+        String r10 = r9.replace("\"quantity", "quantity");
+        String r7 = "[{\"" + r10.substring(0, r10.length() - 3) + "]";
 
 
         //print output to console.
-        System.out.println("Purchased items: " + r7.replace("\",\"", ","));
+        System.out.println("Purchased items: " + r7.replace("+", ","));
     }
 }
